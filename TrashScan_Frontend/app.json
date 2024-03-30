@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "TrashScanFrontend",
-    "slug": "TrashScanFrontend",
+    "name": "TrashScan_Frontend",
+    "slug": "TrashScan_Frontend",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
