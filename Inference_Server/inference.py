@@ -22,7 +22,7 @@ def fit_content(image: Image) -> Image:
     
     return resized_image
 
-def extract_image_with_mask(mask: Image, original_image: Image) -> Image:
+def extract_image_with_mask(mask_image: Image, original_image: Image) -> Image:
     cutout_image = cutout_image.convert('RGB')
     mask_image = mask_image.convert('RGB')
 
