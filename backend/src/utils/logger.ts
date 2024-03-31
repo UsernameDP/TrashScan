@@ -7,7 +7,6 @@ const colors = {
     error: "red",
     warn: "yellow",
     info: "green",
-    http: "blue",
     debug: "white"
 }
 
@@ -15,7 +14,7 @@ const levels = {
     error: 0,
     warning: 1,
     info: 2,
-    success: 3
+    debug: 3
 }
 
 addColors(colors);
@@ -36,6 +35,7 @@ const consoleOutputFormat = format.combine(
 
 const logger = createLogger({
     levels: levels,
+    format: consoleOutputFormat,
     transports: [
         new transports.File({
             filename: resolve(logPath, "run.log"),
