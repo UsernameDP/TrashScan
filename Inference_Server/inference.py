@@ -46,7 +46,7 @@ def inference(base64_data : str):
 
     results = segment_model.predict(original_image)
     masks = results[0].masks
-
+    boxes = results[0].boxes
 
 
     material_counts = {
@@ -56,7 +56,12 @@ def inference(base64_data : str):
 
     items = []
 
-    for mask in masks:
+    for x in range(len(masks)):
+        mask = masks[x]
+        box = boxes[x]
+
+        box_coords = box.xyxy[0].tolist()
+
         mask_pixels = mask.data[0].numpy()
 
         mask_img: Image = Image.fromarray(mask_pixels, "I")
@@ -69,6 +74,13 @@ def inference(base64_data : str):
             material_counts['trash'] += 1
         else:
             material_counts['recycle'][material] += 1
+
+        image_item = {
+            'type': material,
+            'location': box_coords
+        }
+
+        items.append(image_item)
     
     return {
         'items': items,
