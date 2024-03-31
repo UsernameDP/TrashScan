@@ -2,6 +2,7 @@ import React from "react";
 import FontAwesome from "@expo/vector-icons/FontAwesome";
 import { Link, Tabs } from "expo-router";
 import { Pressable } from "react-native";
+import { View, Text } from "react-native";
 
 import Colors from "@/constants/Colors";
 import { useClientOnlyValue } from "@/components/useClientOnlyValue";
@@ -13,7 +14,7 @@ function TabBarIcon(props: {
 }) {
   return (
     <FontAwesome
-      size={28}
+      size={25}
       style={{ marginBottom: -3 }}
       {...props}
     />
@@ -30,12 +31,64 @@ export default function TabLayout() {
       }}
     >
       <Tabs.Screen
-        name="three"
+        name="Home"
         options={{
-          title: "Tab Two",
+          title: "Home",
           tabBarIcon: ({ color }) => (
             <TabBarIcon
-              name="code"
+              name="home"
+              color={color}
+            />
+          )
+        }}
+      />
+
+      <Tabs.Screen
+        name="Map"
+        options={{
+          title: "Map",
+          tabBarIcon: ({ color }) => (
+            <TabBarIcon
+              name="map"
+              color={color}
+            />
+          )
+        }}
+      />
+
+      <Tabs.Screen
+        name="Camera"
+        options={{
+          title: "Camera",
+          tabBarIcon: ({ color }) => (
+            <TabBarIcon
+              name="camera"
+              color={color}
+            />
+          )
+        }}
+      />
+
+      <Tabs.Screen
+        name="Folder"
+        options={{
+          title: "Folder",
+          tabBarIcon: ({ color }) => (
+            <TabBarIcon
+              name="folder"
+              color={color}
+            />
+          )
+        }}
+      />
+
+      <Tabs.Screen
+        name="About"
+        options={{
+          title: "About",
+          tabBarIcon: ({ color }) => (
+            <TabBarIcon
+              name="info-circle"
               color={color}
             />
           )
