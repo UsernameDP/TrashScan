@@ -10,4 +10,6 @@ def hello_world():
     
     image_json = Request.get_json()
     
-    # DO INFERENCE
+    result = inference(image_json['base64'])
+
+    return result
