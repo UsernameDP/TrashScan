@@ -31,7 +31,7 @@ export default function TabLayout() {
       }}
     >
       <Tabs.Screen
-        name="Home"
+        name="index"
         options={{
           title: "Home",
           tabBarIcon: ({ color }) => (
@@ -44,7 +44,7 @@ export default function TabLayout() {
       />
 
       <Tabs.Screen
-        name="Map"
+        name="MapTab"
         options={{
           title: "Map",
           tabBarIcon: ({ color }) => (
@@ -57,7 +57,7 @@ export default function TabLayout() {
       />
 
       <Tabs.Screen
-        name="Camera"
+        name="CameraTab"
         options={{
           title: "Camera",
           tabBarIcon: ({ color }) => (
@@ -70,7 +70,7 @@ export default function TabLayout() {
       />
 
       <Tabs.Screen
-        name="Folder"
+        name="FolderTab"
         options={{
           title: "Folder",
           tabBarIcon: ({ color }) => (
@@ -83,7 +83,7 @@ export default function TabLayout() {
       />
 
       <Tabs.Screen
-        name="About"
+        name="AboutTab"
         options={{
           title: "About",
           tabBarIcon: ({ color }) => (

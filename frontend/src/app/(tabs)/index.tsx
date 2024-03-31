@@ -1,12 +1,12 @@
 import { View, Text } from "react-native";
 import React from "react";
 
-const Folder = () => {
+const HomeTab = () => {
   return (
     <View>
-      <Text>Folder</Text>
+      <Text>HomeTab</Text>
     </View>
   );
 };
 
-export default Folder;
+export default HomeTab;

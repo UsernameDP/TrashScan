@@ -1,12 +1,12 @@
 import { View, Text } from "react-native";
 import React from "react";
 
-const Map = () => {
+const AboutTab = () => {
   return (
     <View>
-      <Text>Map</Text>
+      <Text>AboutTab</Text>
     </View>
   );
 };
 
-export default Map;
+export default AboutTab;
