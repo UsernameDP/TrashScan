@@ -49,6 +49,9 @@ const logger = createLogger({
         new transports.File({
             filename: resolve(logPath, "exceptions.log"),
             format: fileOutputFormat
+        }),
+        new transports.Console({
+            format: consoleOutputFormat
         })
     ]
 });
